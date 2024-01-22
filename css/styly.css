@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(../img/pier-8091934_1920.jpg);
+    height: 100vh; /* VH 100 je 100% view */
+    background-size: cover; /* cover = zaostření uprostřed*/
+    background-attachment: fixed;
+}
+
+/***** reusable ******/
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.heading-main h2 {
+    text-align: center;
+    /*margin-top: 20px;*/
+    font-size: 30px;
+}
+
+.heading-main h2:after {
+    content: "";
+    display: block;
+    max-width: 150px;
+    border-bottom: 2px solid #ff7c32;
+    margin: 20px auto;
+}
+
+.empty-space {
+    height: 50px;
+}
+
+/***** HEADER ******/
+.nav-background {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background:rgba(0, 0, 0, 0.7);
+    z-index: 50;
+    border-bottom: 2px solid white;
+}
+
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 41%;
+    transform: translate(-50%,-50%);
+}
+
+#logo img {
+    width: 100px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+nav ul {
+    float: right;
+    margin-top: 7px;
+    position: fixed;
+    margin-left: 28%;
+    z-index: 100;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+
+}
+
+nav ul li a:hover,
+nav ul li a:active {
+    border-bottom: 3px solid #ff7c32;
+    transition: border-bottom 0.5s;
+}
+
+.header-text h1 {
+    color: white;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2.2px;
+    word-spacing: 3.5px;
+}
+
+.btn {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border: 1px solid #ff7c32;
+    border-radius: 10px;
+    padding: 5px 10px;
+    letter-spacing: 1px;
+    margin-top: 7px;
+    
+}
+
+.btn-full:link,
+.btn-full:visited {
+    background: #ff7c32;
+}
+
+.btn-full:hover,
+.btn-full:active{
+    transition: background 1s;
+    background: #b44b0e;
+}
+
+.btn-empty:hover,
+.btn-empty:active {
+    transition: background 1s;
+    background-color: #b44b0e;
+    border: 1px solid #ff7c32;
+}
+
+.btn-empty:link,
+.btn-empty:visited {
+    margin-left: 5px;
+}
+
+/***** MOBILE NAVIGATION ******/
+.mobile-nav-icon {
+    float: right;
+    margin-top: 5px;
+    display: none;
+    
+}
+
+
+/***** About Us ******/
+.pizza-example img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 4px 7px 15px black;
+}
+
+/***** Our pizza ******/
+
+.pizza-info img {
+    width: 100%;
+    height: 270px;
+    border-radius: 20px;
+    box-shadow: 4px 7px 15px black;
+}
+
+.text-pizza {
+    margin-bottom: 20px;
+}
+
+.text-pizza div {
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 50%;
+    padding: 12px;
+    float: left;
+}
+
+.text-pizza p {
+    margin-left: 60px;
+    font-size: 20px;
+}
+
+/***** Reference ******/
+.reference {
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0, 0, 0, 0.7)), url(../img/pier-8091934_1920.jpg);
+    background-attachment: fixed;
+}
+
+.reference h2 {
+    color: white;
+    padding-top: 15px;
+}
+
+.reference h2::after {
+    border-bottom: 2px solid white;
+}
+
+.one-reference {
+    color: white;
+    font-size: 20px;
+}
+
+.one-reference p {
+    font-style: italic;
+}
+
+.photo-name {
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+.photo-name p {
+    padding: 13px;
+    margin-left: 100px;
+    font-style: normal;
+}
+
+.photo-name img {
+    width: 50px;
+    border-radius: 50%;
+    float: left;
+}
+
+/***** Photo Gallery ******/
+
+.photo-segment a {
+    list-style-type: none;
+    background-color: black;
+    overflow: hidden;
+    height: 300px;
+}
+
+.photo-segment img {
+    width: 100%	;
+    height: 300px;
+    opacity: 0.5;
+    transform: scale(1.15);
+}
+
+.photo-segment a image {
+    width: 100%	;
+    height: 300px;
+    opacity: 0.5;
+    transform: scale(1.15);
+}
+
+.photo-segment img:hover {
+    transition: transform 0.5s, opacity 0.5s;
+    transform: scale(1);
+    opacity: 1;
+}
+
+/***** Contact form ******/
+
+.contact-form {
+    max-width: 700px;
+    text-align: center;
+}
+
+.contact-form input {
+    width: 70%;
+    margin: 5px 5px;
+    padding: 7px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px gray;
+    outline: none;
+}
+
+.contact-form textarea {
+    width: 70%;
+    margin: 5px 5px;
+    padding: 7px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px gray;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+}
+
+.contact-form input[type="text"]:focus, .contact-form input[type="mail"]:focus, textarea:focus {
+    transition: 0.25s;
+    width: 80%;
+    border-color: #b44b0e;
+}
+
+input[type="submit"] {
+    background-color: #b44b0e;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    transition: background-color 0.5s;
+    background-color: #ff7c32;
+    color: black;
+}
+
+/***** Footer page ******/
+.form-result {
+    width: 80%;
+    margin: 0 auto;
+    pad: 10%;
+    margin-bottom: 20px;
+}
+
+.success {
+    background-color: green;
+}
+
+.error {
+    background-color: red;
+}
+
+
+
+/***** Footer page ******/
+
+.footer-page {
+    background-color: #b44b0e;
+    margin-top: 30px;
+    color: white;
+}
+
+.social {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.social p {
+    display: inline;
+    margin-right: 20px;
+}
+
+.social p a:link,
+.social p a:visited {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+
+.footer-text {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.social p a:hover,
+.social p a:active {
+    color: black;
+}
+
+
+
+/***** Stop floating ******/
+.clearfix {zoom: 1}
+.clearfix::after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+} 
+
+/*
+:link - nenavštívený odkaz
+:visited - nenavštívený odkaz
+:hover - po najetí
+:active - ve chvíly kliknutí
+*/
+
+/*
+Procenta jsou základ responzivity
+*/
